@@ -5,10 +5,9 @@ if (isset($_POST["submit_btn"])) {
     $password = $_POST["password"];
 
     if (($email == "test@gmail.com") && ($password == "1234")) {
-        setcookie("user", "login_done", time() + (60 * 1));
+        setcookie("user", "login_done", time() + (60 * 10));
         header("location:homepage.php");
-    } 
-    else {
+    } else {
         $error = "<font color=red>Invalid Specification</font>";
         echo ($error);
     }
@@ -17,32 +16,35 @@ if (isset($_POST["submit_btn"])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
 </head>
 
 <body>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td>Email</td>
-                <td><input type="text" name="email"></td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td><input type="password" name="password"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="submit_btn"></td>
-                <td><input type="reset"></td>
-            </tr>
-        </table>
-    </form>
+    <?php
+    include('nav.html');
+    ?>
+    <div class="content">
+        <h2>Login Page</h2>
+        <hr>
+        <form action="" method="post"
+            style="display:flex; justify-content:center; align-content:center; margin-top:30px;">
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" name="submit_btn">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 
 </html>
