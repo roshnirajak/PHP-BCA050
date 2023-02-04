@@ -16,7 +16,7 @@ if(isset($_POST['submit_form'])){
         $con_password = $_POST['con_pwd'];
     }
     
-    if($email=="test@gmail.com" && $password=="1234"){
+    if(($email=="test@gmail.com") && ($password=="1234") && ($password==$con_password)){
         echo ("Welcome " . $fname);
     }
     else{

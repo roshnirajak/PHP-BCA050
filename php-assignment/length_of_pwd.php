@@ -5,7 +5,7 @@
             $msg= "Password length less than 8";
         }
         else{
-            $msg= "Password length more tha 8";
+            $msg= "Password length more than 8";
         }
     }
 ?>
@@ -13,6 +13,7 @@
 <!DOCTYPE html>
 <head></head>
 <body>
+    <h2>Length of Password</h2>
     <form method="post">
         Enter username:
         <input type="text" name="uname"><br>

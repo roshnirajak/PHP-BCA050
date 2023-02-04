@@ -26,6 +26,7 @@ if (isset($_POST['product'])) {
 <head></head>
 
 <body>
+    <h2>Calculator</h2>
     <form method="post" onsubmit="retrun false">
 
         Enter var a:
