@@ -1,12 +1,18 @@
 <?php
+    if(isset($_GET['q'])){
+        $response = $_GET['q'];
 
+        if($response=='0'){
+            echo ("error");
+        }
+    }
 
 ?>
 <!DOCTYPE html>
 <head></head>
 <body>
     <h2>Sign Up</h2>
-    <form action="3)_verify.php" method="post">
+    <form action="4)_verify.php" method="post">
         <table>
             <tr>
                 <td>First Name</td>

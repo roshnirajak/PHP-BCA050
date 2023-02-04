@@ -10,7 +10,7 @@
             echo ("Welcome " . $fname);
         }
         else{
-            header('location:3)_sign-up.php?q=0');
+            header('location:4)_sign-up.php?q=0');
         }
     }
 ?>
